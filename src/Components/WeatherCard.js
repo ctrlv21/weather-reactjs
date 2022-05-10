@@ -30,16 +30,16 @@ const WeatherCard = ({ weather }) => {
           <div className="grid grid-cols-4 gap-4">
             <div>
               <h5 className="mb-2  font-poppins text-2xl font-bold tracking-tight text-white ">
-                {weather && weather.location.name}
+                {weather.location.name}
               </h5>
               <img src={weather.current.condition.icon} alt="" />
             </div>
             <div>
               <p className="flex text-white font-poppins text-2xl pl-44 box-border w-60">
-                {weather && weather.current.temp_c} ˚C
+                { weather.current.temp_c} ˚C
               </p>
               <p className="flex text-gray-100 font-poppins text-xl pl-44 box-border w-60">
-                {weather && weather.current.condition.text}
+                {weather.current.condition.text}
               </p>
               {MinMax(24, 19)}
             </div>
