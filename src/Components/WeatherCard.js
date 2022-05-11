@@ -10,12 +10,14 @@ const WeatherCard = ({ weather }) => {
     console.log(dae)
 
   };
-  // console.log(weather);
+const onReset=()=>{
+  setVal(false)
+}
   return (
     <div>
       <div className="justify-center flex items-center">
         <div className="mt-20 p-6 max-w-2xl bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-          <div className="grid grid-cols-6 gap-4">
+          <div className="grid grid-cols-6 gap-0">
             <div>
               <h5 className="mb-2  font-poppins text-2xl font-bold tracking-tight text-white ">
                 {weather.location.name}
@@ -92,6 +94,12 @@ const WeatherCard = ({ weather }) => {
                 </div> :" "
               );
             })}
+            <button
+                    className="mt-9 text-center text-black font-poppins text-xl box-border w-44 bg-[#E3F4FE] rounded-3xl"
+onClick={()=>onReset()}
+                  >
+                    Close Forecast
+                  </button>
           </div>
         </div>
       </div>
