@@ -1,9 +1,12 @@
 import TitleBar from "./Components/TitleBar";
 import WeatherCard from "./Components/WeatherCard";
 import React, { useCallback,useEffect, useState } from "react";
-import Wave from 'react-wavify'
+import Wave from 'react-wavify';
+
+
 function App() {
   
+
   const [tempsearch,setTempSearch]= useState("")
   const [search,setSearch]= useState("");
 
@@ -29,6 +32,7 @@ function App() {
     FetchWeather();
   }, [search])
   return (
+    
     <div
       className="bg-white min-h-screen 
     "
